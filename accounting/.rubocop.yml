@@ -1,0 +1,27 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - "db/schema.rb"
+    - "bin/**/*"
+    - "vendor/bundle/**/*"
+    - "node_modules/**/*"
+
+Metrics/BlockLength:
+  Exclude:
+    - "config/routes.rb"
+    - spec/**/*.rb
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - "db/migrate/*.rb"
