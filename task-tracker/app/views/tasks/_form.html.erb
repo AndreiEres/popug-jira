@@ -1,0 +1,13 @@
+<div style="max-width: var(--max-width);">
+  <%= form_with(model: task, class: "d-flex") do |form| %>
+    <div class="flex-grow-1">
+      <%= form.text_field :description, class: "form-control w-100" %>
+    </div>
+    <div class="ms-2">
+      <%= form.submit class: "btn btn-secondary" %>
+    </div>
+  <% end %>
+
+  <div class="small" style="height: 1rem;"><%= alert %></div>
+</div>
+

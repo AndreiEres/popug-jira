@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-between align-items-center mt-2 mb-4">
+  <div class="fw-bold">PopugJira TaskTracker</div>
+  <% if popug %>
+    <div>
+      <%= popug["name"] %>
+      <%= image_tag popug["avatar"], size: "32", class: "rounded ms-2" %>
+    </div>
+  <% end %>
+</div>

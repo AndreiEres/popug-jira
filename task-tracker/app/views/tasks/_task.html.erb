@@ -1,0 +1,13 @@
+<div class="list-group-item d-flex justify-content-between">
+  <div>
+    <%= link_to(task_path(task, task: {status: task.completed? ? :active : :completed }),
+                method: :patch, class: "text-decoration-none") do %>
+      <input class="form-check-input" type="checkbox" <%= "checked" if task.completed? %> >
+    <% end %>
+
+    <%= link_to task.description, edit_task_path(task),
+                class: "text-decoration-none #{"text-decoration-line-through" if task.completed?} text-reset" %>
+  </div>
+
+  <%= link_to "Delete", task, method: :delete, class: "link-secondary text-decoration-none" %>
+</div>

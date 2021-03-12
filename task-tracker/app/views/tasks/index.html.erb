@@ -1,0 +1,11 @@
+<h1 class="mb-2">All tasks</h1>
+
+<div class="mb-4">
+  <%= link_to "My tasks", current_path, class: "link-secondary text-decoration-none" %>
+</div>
+
+<%= render "form", task: @new_task %>
+
+<div class="list-group mt-4" style="max-width: var(--max-width);">
+  <%= @tasks.any? ? render(@tasks) : "No tasks yet" %>
+</div>

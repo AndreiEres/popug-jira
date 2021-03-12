@@ -1,0 +1,9 @@
+<h1 class="mb-2">My tasks</h1>
+
+<div class="mb-4">
+  <%= link_to "All tasks", tasks_path, class: "link-secondary text-decoration-none" %>
+</div>
+
+<div class="list-group mt-4" style="max-width: var(--max-width);">
+  <%= @tasks.any? ? render(@tasks) : "No tasks yet" %>
+</div>
